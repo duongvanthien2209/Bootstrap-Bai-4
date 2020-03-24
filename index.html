@@ -30,13 +30,43 @@
             <button><span>Add New</span><i class="fas fa-sort-down"></i></button>
         </div>
     </header>
+
+    <main>
+        <div class="main-header">
+            <ul class="breadcrum">
+                <li><a href="#">Overview</a></li>
+                <li><i class="fas fa-angle-right"></i></li>
+                <li><a href="#">App Pages</a></li>
+                <li><i class="fas fa-angle-right"></i></li>
+                <li><a href="#" class="breadcrum-active">Team</a></li>
+            </ul>
+            <div class="admin">
+                <button id="admin-toggle"><i class="fas fa-cog fa-lg"></i></button>
+                <div class="admin-collapse" id="admin-collapse">
+                    <ul>
+                        <li><button>Edit Team</button></li>
+                        <li><button>Share</button></li>
+                    </ul>
+                    <button>Leave</button>
+                </div>
+            </div>
+        </div>
+    </main>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let toggle = document.getElementById('toggle');
             let collapse = document.getElementById('collapse');
+            let adminToggle = document.getElementById('admin-toggle');
+            let adminBoard = document.getElementById('admin-collapse');
 
+            // Navbar collapse
             toggle.addEventListener('click', () => {
                 collapse.classList.toggle('d-none');
+            });
+
+            // Admin board
+            adminToggle.addEventListener('click', () => {
+                adminBoard.classList.toggle('d-flex');
             });
         });
     </script>

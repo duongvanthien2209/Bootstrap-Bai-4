@@ -114,8 +114,94 @@ button {
 .collapse > button > i {
     margin-left: 5px;
 }
-
 /* End Of Header */
+/* Main */
+    /* Header */
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        border-bottom: 1px solid #dee2e6;
+        align-items: center;
+    }
+
+    .breadcrum {
+        display: flex;
+        align-items: center;
+    }
+
+    .breadcrum li {
+        margin: 0 5px;
+    }
+
+    .breadcrum li i {
+        color: #888;
+    }
+
+    .breadcrum li a {
+        font-size: 1.15rem;
+        font-weight: 500;
+        color: #007bff;
+    }
+
+    .breadcrum li a.breadcrum-active {
+        color: #888;
+    }
+
+    .main-header button {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: #dee2e6;
+    }
+
+    .admin {
+        position: relative;
+    }
+
+    .d-flex {
+        display: flex !important;
+    }
+
+    .admin-collapse {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 150px;
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0px 0px 5px #888;
+        z-index: 1000;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .admin-collapse ul {
+        padding: 5px 0;
+        border-bottom: 1px solid #888;
+        margin-bottom: 10px;
+    }
+
+    .admin-collapse button {
+        width: 100%;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-align: left;
+        padding-left: 10px;
+        background-color: transparent;
+        color: #007bff;
+        /* margin: 2px 0; */
+    }
+
+    .admin-collapse button:hover {
+        background-color: #eef0f2;
+    }
+    /* End Of Header */
+
+/* End Of Main */
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -136,6 +222,8 @@ button {
         top: 0;
         bottom: 0;
         left: 0;
+        width: 350px;
+        box-sizing: border-box;
     }
 
     #toggle {
@@ -153,6 +241,12 @@ button {
         /* display: none; */
     }
     /* End Of Header */
+
+    /* Main */
+    main {
+        margin-left: 350px;
+    }
+    /* End Of Main */
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
