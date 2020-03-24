@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icon -->
+    <script src="https://kit.fontawesome.com/5e7d2a297a.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Bai 6</title>
+</head>
+<body>
+    <header class="navbar">
+        <a class="brand" href="#"><img src="https://picsum.photos/200" alt=""></a>
+        <button id="toggle"><i class="fas fa-bars fa-lg"></i></button>
+        <button id="avatar"><img src="https://picsum.photos/200" alt=""></button>
+        <div class="collapse" id="collapse">
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Pages<i class="fas fa-caret-right"></i></a></li>
+                <li><a href="#">Components<i class="fas fa-caret-right"></i></a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Changelog</a></li>
+            </ul>
+            <div class="input-group">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <button><span>Add New</span><i class="fas fa-sort-down"></i></button>
+        </div>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let toggle = document.getElementById('toggle');
+            let collapse = document.getElementById('collapse');
+
+            toggle.addEventListener('click', () => {
+                collapse.classList.toggle('d-none');
+            });
+        });
+    </script>
+</body>
+</html>

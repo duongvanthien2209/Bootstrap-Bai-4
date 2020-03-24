@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #343a40;
+    position: relative;
+}
+
+.brand img,#avatar img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: block;
+}
+
+#toggle {
+    padding: 10px;
+    margin-left: auto;
+    border: 1px solid #888;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: #888;
+}
+
+.d-none {
+    display: flex !important;
+}
+
+.collapse {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #343a40;
+}
+
+.collapse ul {
+    border-bottom: 1px solid #888;
+}
+
+.collapse a {
+    font-size: 1.15rem;
+    color: #888;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.collapse a:hover {
+    color: white;
+}
+
+.collapse .input-group {
+    margin: 10px 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    /* border: 1px solid #888; */
+    border-radius: 25px;
+    background-color: #494e53;
+    color: white;
+}
+
+.collapse .input-group input {
+    border: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    padding-left: 10px;
+    background-color: transparent;
+}
+
+.collapse > button {
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.collapse > button > i {
+    margin-left: 5px;
+}
+
+/* End Of Header */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* Header */
+    .navbar {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+    .collapse {
+        display: flex !important;
+        position: static;
+        flex-grow: 1;
+    }
+
+    #avatar {
+        order: 1;
+        /* display: none; */
+    }
+    /* End Of Header */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
