@@ -171,7 +171,7 @@ button {
         display: none;
         flex-direction: column;
         background-color: white;
-        box-shadow: 0px 0px 5px #888;
+        box-shadow: 2px 2px 5px #888;
         z-index: 1000;
         padding: 10px;
         border-radius: 5px;
@@ -179,7 +179,7 @@ button {
 
     .admin-collapse ul {
         padding: 5px 0;
-        border-bottom: 1px solid #888;
+        border-bottom: 1px solid #dee2e6;
         margin-bottom: 10px;
     }
 
@@ -199,7 +199,57 @@ button {
         background-color: #eef0f2;
     }
     /* End Of Header */
+.main {
+    background-color: #f8f9fa;
+    padding: 20px 10%;
+}
+    /* About */
+    .main-about {
+        /* padding: 20px 0; */
+        border-bottom: 1px solid #dee2e6;
+    }
 
+    .main-about > h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .main-about > p {
+        font-size: 1.5rem;
+        color: #888;
+    }
+
+    .main-about > ul {
+        display: flex;
+        margin: 20px 0;
+    }
+
+    .main-about > ul > li:last-child a {
+        height: 40px;
+        width: 40px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid white;
+        background-color: #dee2e6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #888;
+    }
+
+    /* .main-about > ul > li:first-child ~ li{
+        border-color: tomato;
+    } */
+
+    .main-about > ul img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+    /* End Of About */
 /* End Of Main */
 
 

@@ -51,6 +51,21 @@
                 </div>
             </div>
         </div>
+        <div class="main">
+            <div class="main-about">
+                <h1>Medium Rare<span><img src="images/book.svg" alt="" style="height: 30px; width: 30px;margin-left: 5px;"></span></h1>
+                <p>A small web studio crafting lovely template products.</p>
+                <ul id="user-list">
+                    <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                    <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                    <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                    <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                    <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                    <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                    <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -68,6 +83,16 @@
             adminToggle.addEventListener('click', () => {
                 adminBoard.classList.toggle('d-flex');
             });
+
+            // List users
+            let left = -5;
+            let users = document.querySelectorAll('#user-list > li:first-child ~ li img');
+            for(let item of users)
+            {  
+                item.style.position = 'relative';
+                item.style.left = `${left}px`;
+                left -= 5;
+            }
         });
     </script>
 </body>
