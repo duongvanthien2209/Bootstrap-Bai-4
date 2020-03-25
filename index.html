@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
 
     <title>Bai 6</title>
 </head>
+
 <body>
     <header class="navbar">
         <a class="brand" href="#"><img src="https://picsum.photos/200" alt=""></a>
@@ -53,9 +55,10 @@
         </div>
         <div class="main">
             <div class="main-about">
-                <h1>Medium Rare<span><img src="images/book.svg" alt="" style="height: 30px; width: 30px;margin-left: 5px;"></span></h1>
+                <h1>Medium Rare<span><img src="images/book.svg" alt=""
+                            style="height: 30px; width: 30px;margin-left: 5px;"></span></h1>
                 <p>A small web studio crafting lovely template products.</p>
-                <ul id="user-list">
+                <ul class="user-list" id="user-list-1">
                     <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
                     <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
                     <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
@@ -65,9 +68,97 @@
                     <li><a href="#"><i class="fas fa-plus"></i></a></li>
                 </ul>
             </div>
+            <div class="main-content">
+                <div class="main-content-header">
+                    <button data-id="projects">Projects</button>
+                    <button data-id="Members">Members</button>
+                </div>
+                <div class="main-content-title">
+                    <h4>Members</h4>
+                    <button><i class="fas fa-plus fa-lg"></i></button>
+                    <div class="input-group">
+                        <i class="fab fa-edge"></i>
+                        <input type="text" placeholder="Filter members">
+                    </div>
+                </div>
+                <ul class="content">
+                    <li class="content-item">
+                        <h4>New Website</h4>
+                        <button><i class="fas fa-ellipsis-v fa-lg"></i></button>
+                        <ul class="user-list" id="user-list-2">
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                        </ul>
+                        <div class="task">
+                            <i class="fas fa-tasks"></i>
+                            <p>6/10</p>
+                            <p>Due 4 days</p>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <h4>Company Vision Statement</h4>
+                        <button><i class="fas fa-ellipsis-v fa-lg"></i></button>
+                        <ul class="user-list" id="user-list-3">
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                        </ul>
+                        <div class="task">
+                            <i class="fas fa-tasks"></i>
+                            <p>6/10</p>
+                            <p>Due 4 days</p>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <h4>Update Privacy Pollicy</h4>
+                        <button><i class="fas fa-ellipsis-v fa-lg"></i></button>
+                        <ul class="user-list" id="user-list-4">
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                        </ul>
+                        <div class="task">
+                            <i class="fas fa-tasks"></i>
+                            <p>6/10</p>
+                            <p>Due 4 days</p>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <h4>Update Marketing Collateral</h4>
+                        <button><i class="fas fa-ellipsis-v fa-lg"></i></button>
+                        <ul class="user-list" id="user-list-5">
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><img src="https://picsum.photos/200" alt=""></a></li>
+                            <li><a href="#"><i class="fas fa-plus"></i></a></li>
+                        </ul>
+                        <div class="task">
+                            <i class="fas fa-tasks"></i>
+                            <p>6/10</p>
+                            <p>Due 4 days</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </main>
     <script>
+        function addAvatar(users,index) {
+            let left = index;
+            for (let item of users) {
+                item.style.position = 'relative';
+                item.style.left = `${left}px`;
+                left -= 5;
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             let toggle = document.getElementById('toggle');
             let collapse = document.getElementById('collapse');
@@ -85,15 +176,13 @@
             });
 
             // List users
-            let left = -5;
-            let users = document.querySelectorAll('#user-list > li:first-child ~ li img');
-            for(let item of users)
-            {  
-                item.style.position = 'relative';
-                item.style.left = `${left}px`;
-                left -= 5;
+            for(let i = 1; i<=5; i++)
+            {
+                let users = document.querySelectorAll(`#user-list-${i} > li:first-child ~ li img`);
+                addAvatar(users,-10);
             }
         });
     </script>
 </body>
+
 </html>

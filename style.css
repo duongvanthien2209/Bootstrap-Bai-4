@@ -220,12 +220,13 @@ button {
         color: #888;
     }
 
-    .main-about > ul {
+    .user-list {
         display: flex;
-        margin: 20px 0;
+        margin: 20px 0 50px 0;
+        clear: both;
     }
 
-    .main-about > ul > li:last-child a {
+    .user-list > li:last-child a {
         height: 40px;
         width: 40px;
         height: 40px;
@@ -239,17 +240,127 @@ button {
         color: #888;
     }
 
-    /* .main-about > ul > li:first-child ~ li{
+    /* .user-list > li:first-child ~ li{
         border-color: tomato;
     } */
 
-    .main-about > ul img {
+    .user-list img {
         height: 40px;
         width: 40px;
         border-radius: 50%;
         border: 2px solid white;
     }
     /* End Of About */
+
+    /* Main Content */
+    .main-content {
+        /* padding: 20px 0; */
+    }
+        .main-content-header {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            display: flex;
+            margin: 30px 0;
+        }
+
+        .main-content-header button {
+            flex-grow: 1;
+            border-radius: 5px;
+            padding: 10px 0;
+            color: #888;
+            font-size: 1.25rem;
+        }
+
+        .main-content-header button:hover {
+            background-color: white;
+            color: #007bff;
+        }
+
+        .main-content-title {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-content-title > h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .main-content-title > button {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            margin-left: 10px;
+        }
+
+        .main-content-title > button:hover {
+            background-color: #888;
+        }
+
+        .main-content-title > .input-group {
+            padding: 5px 10px;
+            border-radius: 15px;
+            border: 1px solid #888;
+            background-color: white;
+            margin-left: auto;
+        }
+
+        .main-content-title > .input-group > i {
+            color: #888;
+        }
+
+        .main-content-title > .input-group > input {
+            border: none;
+            background-color: transparent;
+            font-size: 1.25rem;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 20px 0;
+            grid-column-gap: 50px;
+        }
+
+        .content-item {
+            padding: 20px 10px;
+            border: 1px solid #88888847;
+            border-radius: 7px;
+            box-shadow: 2px 2px 10px -5px #888;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .content-item > h4 {
+            float: left;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .content-item > button {
+            /* float: right; */
+            position: absolute;
+            right: 10px;
+            top: 20px;
+        }
+
+        .task {
+            display: flex;
+            clear: both;
+            color: #888;
+        }
+
+        .task p:last-child {
+            margin-left: auto;
+        }
+
+        .task > i {
+            margin-right: 5px;
+        }
+    /* End Of Main Content */
 /* End Of Main */
 
 
@@ -296,6 +407,12 @@ button {
     main {
         margin-left: 350px;
     }
+
+        /* Main Content */
+        .content {
+            grid-template-columns: 1fr 1fr;
+        }
+        /* End Of Main Content */
     /* End Of Main */
 }
 
